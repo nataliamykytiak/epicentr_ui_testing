@@ -9,8 +9,14 @@ public class HomePage extends BasePage {
 
     public String homePageUrl = "https://epicentrk.ua/";
 
-    @FindBy(xpath = "//header/div[1]/div[6]/div[1]/span[1]/*[1]")
+    @FindBy(xpath = "//span[@class='header__login-opener-icon']")
     private WebElement logInIcon;
+
+
+
+
+
+
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -20,12 +26,14 @@ public class HomePage extends BasePage {
         driver.get(url);
     }
 
-    public WebElement getLogInIcon(){
-        return logInIcon;
-    }
     public void clickLogInIcon(){
         logInIcon.click();
     }
+
+    public String getLogInIconText () {
+        return logInIcon.getText();
+    }
+
 
 
 

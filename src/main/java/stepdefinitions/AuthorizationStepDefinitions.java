@@ -2,7 +2,6 @@ package stepdefinitions;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import manager.PageFactoryManager;
@@ -10,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import pages.apppages.HomePage;
+import pages.apppages.LogInPage;
 
 import static io.github.bonigarcia.wdm.WebDriverManager.chromedriver;
 import static org.testng.Assert.*;
@@ -20,12 +20,12 @@ public class AuthorizationStepDefinitions {
     WebDriver driver;
     PageFactoryManager pageFactoryManager;
     HomePage homePage;
+    LogInPage logInPage;
 
     @Before
     public void testsSetUp() {
         ChromeOptions options = new ChromeOptions();
 //        options.addArguments("--headless=new");
-        options.addArguments("--disable-notifications");
         chromedriver().setup();
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
@@ -46,29 +46,25 @@ public class AuthorizationStepDefinitions {
 
     @When("User clicks Log in icon")
     public void userClicksLogInIcon() {
-//        homePage.waitVisibilityOfElement(2, homePage.getLogInIcon());
         homePage.clickLogInIcon();
-
+        logInPage = pageFactoryManager.getLogInPage();
     }
     @When("User enters phone number {string}")
     public void userEntersPhoneNumber(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        logInPage.enterPhoneNumber(string);
     }
     @When("User enters password {string}")
     public void userEntersPassword(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        logInPage.enterUserPassword(string);
     }
     @When("User clicks Log in button")
     public void userClicksLogInButton() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        logInPage.clickLogInButton();
     }
     @Then("User checks that Log in icon text equals {string}")
     public void userChecksThatLogInIconTextEquals(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        homePage = pageFactoryManager.getHomePage();
+        homePage.getLogInIconText();
     }
 
 

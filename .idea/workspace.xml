@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51c19b21-10c4-40a6-8f8b-89d9c045a1b4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/PageFactoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/PageFactoryManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stepdefinitions/AuthorizationStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AuthorizationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/cucumberfiles/authorization.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cucumberrunner/RunCucumberTest.java" beforeDir="false" />
-    </list>
+    <list default="true" id="51c19b21-10c4-40a6-8f8b-89d9c045a1b4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +24,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -209,14 +201,33 @@
       <option name="project" value="LOCAL" />
       <updated>1685047896880</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="trying to coop with adding new branch">
+      <created>1685215503098</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685215503098</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added maven dependencies" />
     <MESSAGE value="formed project structure" />
     <MESSAGE value="added some pages, page factory manager and step definition class with basic settings" />
     <MESSAGE value="added first test, not yet completed, blocked with notification about user's current location" />
-    <option name="LAST_COMMIT_MESSAGE" value="added first test, not yet completed, blocked with notification about user's current location" />
+    <MESSAGE value="trying to coop with adding new branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="trying to coop with adding new branch" />
   </component>
 </project>

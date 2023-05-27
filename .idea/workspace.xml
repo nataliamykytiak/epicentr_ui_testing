@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51c19b21-10c4-40a6-8f8b-89d9c045a1b4" name="Changes" comment="finished first test (log in). Thinking about to continue this project without using Cucumber">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/LogInPage.java" afterDir="false" />
+    <list default="true" id="51c19b21-10c4-40a6-8f8b-89d9c045a1b4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/manager/PageFactoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/PageFactoryManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stepdefinitions/AuthorizationStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stepdefinitions/AuthorizationStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stepdefinitions/AuthorizationStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AuthorizationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cucumberfiles/authorization.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cucumberrunner/RunCucumberTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="cucumber_version" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,68 +68,10 @@
       <recent name="C:\Users\HP\IdeaProjects\Epicentr_testing\src\main\java\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: User can log in with valid credentials (1)">
-    <configuration name="All Features in: cucumberfiles" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/main/resources/cucumberfiles" />
-      <option name="GLUE" value="stepdefinitions" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="Epicentr_testing" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="All Features in: cucumberfiles" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Feature: general" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/main/resources/cucumberfiles/general.feature" />
-      <option name="GLUE" value="stepdefinitions" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="Epicentr_testing" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: general" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.AuthorizationTests.loginWithValidCredentials">
     <configuration name="Scenario: User can log in with valid credentials (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/main/resources/cucumberfiles/authorization.feature" />
-      <option name="GLUE" value="stepdefinitions" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="Epicentr_testing" />
-      <option name="NAME_FILTER" value="^User can log in with valid credentials$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^User can log in with valid credentials$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: User can log in with valid credentials" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: User can log in with valid credentials" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/main/resources/cucumberfiles/general.feature" />
       <option name="GLUE" value="stepdefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Epicentr_testing" />
@@ -164,13 +109,59 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AuthorizationTests.loginWithValidCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Epicentr_testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.AuthorizationTests" />
+      <option name="METHOD_NAME" value="loginWithValidCredentials" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthorizationTests.testsSetUp" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Epicentr_testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.AuthorizationTests" />
+      <option name="METHOD_NAME" value="testsSetUp" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/IdeaProjects/Epicentr_testing/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Epicentr_testing" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AuthorizationTests.loginWithValidCredentials" />
+        <item itemvalue="TestNG.AuthorizationTests.testsSetUp" />
+        <item itemvalue="TestNG.C:/IdeaProjects/Epicentr_testing/testng.xml" />
         <item itemvalue="Cucumber Java.Scenario: User opens 'https://www.amazon.com/' page" />
         <item itemvalue="Cucumber Java.Scenario: User can log in with valid credentials (1)" />
-        <item itemvalue="Cucumber Java.Scenario: User can log in with valid credentials" />
-        <item itemvalue="Cucumber Java.Feature: general" />
-        <item itemvalue="Cucumber Java.All Features in: cucumberfiles" />
       </list>
     </recent_temporary>
   </component>
@@ -218,46 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685047896880</updated>
     </task>
-    <task id="LOCAL-00006" summary="added credentials file to gitignore">
-      <created>1685048276682</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1685048276682</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="6" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="cucumber_version" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added maven dependencies" />
     <MESSAGE value="formed project structure" />
     <MESSAGE value="added some pages, page factory manager and step definition class with basic settings" />
     <MESSAGE value="added first test, not yet completed, blocked with notification about user's current location" />
-    <MESSAGE value="added credentials file to gitignore" />
-    <MESSAGE value="finished first test (log in). Thinking about to continue this project without using Cucumber" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished first test (log in). Thinking about to continue this project without using Cucumber" />
+    <option name="LAST_COMMIT_MESSAGE" value="added first test, not yet completed, blocked with notification about user's current location" />
   </component>
 </project>

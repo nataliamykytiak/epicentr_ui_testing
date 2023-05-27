@@ -15,6 +15,8 @@ public class PageFactoryManager {
     public HomePage getHomePage() {
         return new HomePage(driver);
     }
+    public LogInPage getLogInPage() {
+        return new LogInPage(driver);
+    }
 
-    public LogInPage getLogInPage() { return new LogInPage(driver);}
 }

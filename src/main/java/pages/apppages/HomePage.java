@@ -12,6 +12,9 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//span[@class='header__login-opener-icon']")
     private WebElement logInIcon;
 
+    @FindBy(xpath = "//span[@class='header__login-opener-text']")
+    private WebElement logInIconUsername;
+
 
 
 
@@ -31,7 +34,7 @@ public class HomePage extends BasePage {
     }
 
     public String getLogInIconText () {
-        return logInIcon.getText();
+        return logInIconUsername.getText();
     }
 
 

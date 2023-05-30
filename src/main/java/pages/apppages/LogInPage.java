@@ -10,11 +10,14 @@ public class LogInPage extends BasePage {
     @FindBy(xpath = "//input[@id='user_login']")
     private WebElement phoneNumberInputField;
 
-    @FindBy(xpath = "//input[@id='user_login']")
+    @FindBy(xpath = "//input[@id='user_pass']")
     private WebElement userPasswordInputField;
 
-    @FindBy(xpath = "//input[@id='user_login']")
+    @FindBy(xpath = "//button[contains(text(),'Увійти')]")
     private WebElement logInButton;
+
+    @FindBy(xpath = "//p[contains(.,'Невiрний логiн або пароль.')]")
+    private WebElement wrongLoginOrPasswordWarning;
 
     public LogInPage(WebDriver driver) {
         super(driver);
@@ -30,5 +33,9 @@ public class LogInPage extends BasePage {
 
     public void clickLogInButton() {
         logInButton.click();
+    }
+
+    public String getLogInWarning() {
+        return wrongLoginOrPasswordWarning.getText();
     }
 }

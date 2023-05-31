@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51c19b21-10c4-40a6-8f8b-89d9c045a1b4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/LocationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/PageFactoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/PageFactoryManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/LogInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/LogInPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/AuthorizationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AuthorizationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -224,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685479618195</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="completed 2 tests - login with valid and not valid credentials">
+      <created>1685557539049</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1685557539049</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -247,6 +253,7 @@
     <MESSAGE value="adding new branch to git" />
     <MESSAGE value="added everything properly" />
     <MESSAGE value="added 2nd registation test. Problems with warning xpath" />
-    <option name="LAST_COMMIT_MESSAGE" value="added 2nd registation test. Problems with warning xpath" />
+    <MESSAGE value="completed 2 tests - login with valid and not valid credentials" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed 2 tests - login with valid and not valid credentials" />
   </component>
 </project>

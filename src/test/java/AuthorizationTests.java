@@ -27,7 +27,7 @@ public class AuthorizationTests {
     @Test
     public void testsSetUp() {
         ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--headless=new");
+        options.addArguments("--headless=new");
         options.addArguments("--disable-notifications");
         chromedriver().setup();
         driver = new ChromeDriver(options);
@@ -71,7 +71,7 @@ public class AuthorizationTests {
         logInPage.enterPhoneNumber(phoneNumber);
         logInPage.enterUserPassword(userPassword);
         logInPage.clickLogInButton();
-        pageFactoryManager.getHomePage().waitForPageLoadComplete(2);
+        pageFactoryManager.getHomePage().waitForPageLoadComplete(DEFAULT_TIMEOUT);
         Assert.assertEquals(homePage.getLogInIconText(), userName);
         homePage.clickLogInIcon();
         userProfilePage = pageFactoryManager.getUserProfilePage();

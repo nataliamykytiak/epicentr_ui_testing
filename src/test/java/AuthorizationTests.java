@@ -9,6 +9,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.apppages.HomePage;
 import pages.apppages.LogInPage;
+import pages.apppages.UserProfilePage;
 
 import static io.github.bonigarcia.wdm.WebDriverManager.chromedriver;
 
@@ -20,12 +21,13 @@ public class AuthorizationTests {
     PageFactoryManager pageFactoryManager;
     HomePage homePage;
     LogInPage logInPage;
+    UserProfilePage userProfilePage;
 
     @BeforeTest
     @Test
     public void testsSetUp() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new");
+//        options.addArguments("--headless=new");
         options.addArguments("--disable-notifications");
         chromedriver().setup();
         driver = new ChromeDriver(options);
@@ -43,7 +45,7 @@ public class AuthorizationTests {
     public static Object[][] logInRegisteredUserDataProvider() {
         return new Object[][] {
                 {
-                    "https://epicentrk.ua/", "938702483", "Nataliia.1", "Наталя"
+                    "https://epicentrk.ua/", "938702483", "Nataliia.1", "Наталя", "Увійти"
                 }
         };
     }
@@ -52,14 +54,15 @@ public class AuthorizationTests {
     public static Object[][] logInNotRegisteredUserDataProvider() {
         return new Object[][] {
                 {
-                        "https://epicentrk.ua/", "938702483", "Nataliia.1", "Невiрний логiн або пароль."
+                        "https://epicentrk.ua/", "93870248", "Nataliia.1", "Невiрний логiн або пароль."
                 }
         };
     }
 
 
     @Test(dataProvider = "logInRegisteredUser")
-    public void loginWithValidCredentialsAsARegisteredUser(final String url, String phoneNumber, String userPassword, String userName) {
+    public void loginWithValidCredentialsAsARegisteredUser(final String url, String phoneNumber, String userPassword,
+                                                                 String userName, String logInButtonName) {
         homePage = pageFactoryManager.getHomePage();
         homePage.openHomePage(url);
         homePage.waitForPageLoadComplete(DEFAULT_TIMEOUT);
@@ -70,6 +73,10 @@ public class AuthorizationTests {
         logInPage.clickLogInButton();
         pageFactoryManager.getHomePage().waitForPageLoadComplete(2);
         Assert.assertEquals(homePage.getLogInIconText(), userName);
+        homePage.clickLogInIcon();
+        userProfilePage = pageFactoryManager.getUserProfilePage();
+        userProfilePage.clicklogOutButton();
+        Assert.assertEquals(homePage.getLogInIconText(), logInButtonName);
     }
 
     @Test(dataProvider = "logInNotRegisteredUser")
@@ -82,8 +89,15 @@ public class AuthorizationTests {
         logInPage.enterPhoneNumber(phoneNumber);
         logInPage.enterUserPassword(userPassword);
         logInPage.clickLogInButton();
+        logInPage.waitForPageLoadComplete(DEFAULT_TIMEOUT);
         Assert.assertEquals(logInPage.getLogInWarning(), warning);
     }
+
+
+
+
+
+
 
 
 

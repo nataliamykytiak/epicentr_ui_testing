@@ -3,6 +3,7 @@ package manager;
 import org.openqa.selenium.WebDriver;
 import pages.apppages.HomePage;
 import pages.apppages.LogInPage;
+import pages.apppages.UserProfilePage;
 
 public class PageFactoryManager {
 
@@ -17,6 +18,10 @@ public class PageFactoryManager {
     }
     public LogInPage getLogInPage() {
         return new LogInPage(driver);
+    }
+
+    public UserProfilePage getUserProfilePage() {
+        return new UserProfilePage(driver);
     }
 
 }

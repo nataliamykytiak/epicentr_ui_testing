@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="51c19b21-10c4-40a6-8f8b-89d9c045a1b4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/manager/PageFactoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/PageFactoryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/LogInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/LogInPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AuthorizationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AuthorizationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AuthorizationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AuthorizationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,9 +146,9 @@
       <list>
         <item itemvalue="TestNG.AuthorizationTests.loginAsNotRegisteredUser" />
         <item itemvalue="TestNG.AuthorizationTests.loginWithValidCredentialsAsARegisteredUser" />
+        <item itemvalue="TestNG.AuthorizationTests.testsSetUp" />
         <item itemvalue="TestNG.AuthorizationTests.loginWithValidCredentials" />
         <item itemvalue="TestNG.C:/IdeaProjects/Epicentr_testing/testng.xml" />
-        <item itemvalue="TestNG.AuthorizationTests.testsSetUp" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685215775306</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added 2nd registation test. Problems with warning xpath">
+      <created>1685479618194</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1685479618195</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -239,6 +246,7 @@
     <MESSAGE value="trying to coop with adding new branch" />
     <MESSAGE value="adding new branch to git" />
     <MESSAGE value="added everything properly" />
-    <option name="LAST_COMMIT_MESSAGE" value="added everything properly" />
+    <MESSAGE value="added 2nd registation test. Problems with warning xpath" />
+    <option name="LAST_COMMIT_MESSAGE" value="added 2nd registation test. Problems with warning xpath" />
   </component>
 </project>

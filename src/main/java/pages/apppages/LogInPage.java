@@ -16,8 +16,8 @@ public class LogInPage extends BasePage {
     @FindBy(xpath = "//button[contains(text(),'Увійти')]")
     private WebElement logInButton;
 
-    @FindBy(xpath = "//p[contains(.,'Невiрний логiн або пароль.')]")
-    private WebElement wrongLoginOrPasswordWarning;
+    @FindBy(xpath = "//form[@id='auth_form']")
+    private WebElement logInFormText;
 
     public LogInPage(WebDriver driver) {
         super(driver);
@@ -36,6 +36,8 @@ public class LogInPage extends BasePage {
     }
 
     public String getLogInWarning() {
-        return wrongLoginOrPasswordWarning.getText();
+        waitVisibilityOfElement(3, logInFormText);
+        String warning = logInFormText.getText();
+        return warning.substring(0, warning.indexOf('\n'));
     }
 }

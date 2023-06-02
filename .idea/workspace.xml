@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51c19b21-10c4-40a6-8f8b-89d9c045a1b4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/LocationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/manager/PageFactoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/PageFactoryManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/AuthorizationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AuthorizationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="cucumber_version" />
+        <entry key="$PROJECT_DIR$" value="267e4dbab3a0de8c4403159e0349673d3ad31504" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -70,7 +69,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AuthorizationTests.loginAsNotRegisteredUser">
+  <component name="RunManager" selected="TestNG.AuthorizationTests.loginWithValidCredentialsAsARegisteredUser">
     <configuration name="AuthorizationTests.loginAsNotRegisteredUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Epicentr_testing" />
       <option name="PACKAGE_NAME" value="" />
@@ -143,8 +142,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AuthorizationTests.loginAsNotRegisteredUser" />
         <item itemvalue="TestNG.AuthorizationTests.loginWithValidCredentialsAsARegisteredUser" />
+        <item itemvalue="TestNG.AuthorizationTests.loginAsNotRegisteredUser" />
         <item itemvalue="TestNG.AuthorizationTests.testsSetUp" />
         <item itemvalue="TestNG.AuthorizationTests.loginWithValidCredentials" />
         <item itemvalue="TestNG.C:/IdeaProjects/Epicentr_testing/testng.xml" />

@@ -7,7 +7,7 @@ import pages.apppages.UserProfilePage;
 
 public class PageFactoryManager {
 
-    WebDriver driver;
+    private WebDriver driver;
 
     public PageFactoryManager(WebDriver driver) {
         this.driver = driver;

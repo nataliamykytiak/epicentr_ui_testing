@@ -14,7 +14,7 @@ public class UserProfilePage extends BasePage {
         super(driver);
     }
 
-    public void clicklogOutButton(){
+    public void clickLogOutButton(){
         logOutButton.click();
     }
 }

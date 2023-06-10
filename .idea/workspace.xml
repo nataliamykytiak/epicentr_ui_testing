@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="51c19b21-10c4-40a6-8f8b-89d9c045a1b4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/PageFactoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/PageFactoryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/UserProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/UserProfilePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/AuthorizationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AuthorizationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LocationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LocationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +58,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/IdeaProjects/Epicentr_testing/src/test/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/IdeaProjects/FinalTask&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/IdeaProjects&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -69,30 +74,12 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AuthorizationTests.loginWithValidCredentialsAsARegisteredUser">
+  <component name="RunManager" selected="TestNG.LocationTests.changeCurrentLocationTest">
     <configuration name="AuthorizationTests.loginAsNotRegisteredUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Epicentr_testing" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AuthorizationTests" />
       <option name="METHOD_NAME" value="loginAsNotRegisteredUser" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthorizationTests.loginWithValidCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Epicentr_testing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="AuthorizationTests" />
-      <option name="METHOD_NAME" value="loginWithValidCredentials" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -112,17 +99,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthorizationTests.testsSetUp" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AuthorizationTests.loginWithValidCredentialsAsARegisteredUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Epicentr_testing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AuthorizationTests" />
-      <option name="METHOD_NAME" value="testsSetUp" />
+      <option name="METHOD_NAME" value="loginWithValidCredentialsAsARegisteredUserTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -140,13 +122,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LocationTests.changeCurrentLocationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Epicentr_testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LocationTests" />
+      <option name="METHOD_NAME" value="changeCurrentLocationTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LocationTests.changeCurrentLocationTest" />
+        <item itemvalue="TestNG.AuthorizationTests.loginWithValidCredentialsAsARegisteredUserTest" />
+        <item itemvalue="TestNG.C:/IdeaProjects/Epicentr_testing/testng.xml" />
         <item itemvalue="TestNG.AuthorizationTests.loginWithValidCredentialsAsARegisteredUser" />
         <item itemvalue="TestNG.AuthorizationTests.loginAsNotRegisteredUser" />
-        <item itemvalue="TestNG.AuthorizationTests.testsSetUp" />
-        <item itemvalue="TestNG.AuthorizationTests.loginWithValidCredentials" />
-        <item itemvalue="TestNG.C:/IdeaProjects/Epicentr_testing/testng.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +229,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685557539049</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="optimized code - added BaseTest class">
+      <created>1685734072351</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1685734072351</updated>
+    </task>
+    <task id="LOCAL-00012" summary="optimized code - added BaseTest class">
+      <created>1685734165902</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1685734165902</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -253,6 +267,7 @@
     <MESSAGE value="added everything properly" />
     <MESSAGE value="added 2nd registation test. Problems with warning xpath" />
     <MESSAGE value="completed 2 tests - login with valid and not valid credentials" />
-    <option name="LAST_COMMIT_MESSAGE" value="completed 2 tests - login with valid and not valid credentials" />
+    <MESSAGE value="optimized code - added BaseTest class" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimized code - added BaseTest class" />
   </component>
 </project>

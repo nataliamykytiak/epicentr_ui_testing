@@ -4,6 +4,7 @@
     <test verbose="2" preserve-order="true" name="C:/IdeaProjects/Epicentr_testing/src/test/java/tests">
         <classes>
             <class name="AuthorizationTests" />
+            <class name="tests.LocationTests"/>
         </classes>
     </test>
 </suite>

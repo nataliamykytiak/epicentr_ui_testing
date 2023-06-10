@@ -29,4 +29,13 @@ public class BasePage {
                 .until(ExpectedConditions.visibilityOf(element));
     }
 
+    public void waitForElementToBeClickable(long timeToWait, WebElement element) {
+        new WebDriverWait(driver, Duration.ofSeconds(timeToWait))
+                .until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public void waitForKeysToBeEntered(long timeToWait) {
+        new WebDriverWait(driver, Duration.ofSeconds(timeToWait));
+    }
+
 }

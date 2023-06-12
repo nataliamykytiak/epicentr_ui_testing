@@ -1,7 +1,8 @@
+package tests;
+
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import tests.BaseTest;
 
 public class AuthorizationTests extends BaseTest {
 
@@ -28,12 +29,10 @@ public class AuthorizationTests extends BaseTest {
     public void loginWithValidCredentialsAsARegisteredUserTest(final String phoneNumber, String userPassword,
                                                                  String userName, String logInButtonName) {
         homePage.openHomePage(HOME_URL);
-        homePage.waitForPageLoadComplete(DEFAULT_TIMEOUT);
         homePage.clickLogInIcon();
         logInPage.enterPhoneNumber(phoneNumber);
         logInPage.enterUserPassword(userPassword);
         logInPage.clickLogInButton();
-        homePage.waitForPageLoadComplete(DEFAULT_TIMEOUT);
         Assert.assertEquals(homePage.getLogInIconText(), userName);
         homePage.clickLogInIcon();
         userProfilePage.clickLogOutButton();
@@ -43,12 +42,11 @@ public class AuthorizationTests extends BaseTest {
     @Test(dataProvider = "logInNotRegisteredUser")
     public void loginAsNotRegisteredUserTest(final String phoneNumber, String userPassword, String warning) {
         homePage.openHomePage(HOME_URL);
-        homePage.waitForPageLoadComplete(DEFAULT_TIMEOUT);
         homePage.clickLogInIcon();
         logInPage.enterPhoneNumber(phoneNumber);
         logInPage.enterUserPassword(userPassword);
         logInPage.clickLogInButton();
-        logInPage.waitForPageLoadComplete(DEFAULT_TIMEOUT);
+        logInPage.waitForPageLoadComplete();
         Assert.assertEquals(logInPage.getLogInWarning(), warning);
     }
 

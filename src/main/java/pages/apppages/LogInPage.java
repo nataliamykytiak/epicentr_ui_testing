@@ -33,10 +33,11 @@ public class LogInPage extends BasePage {
 
     public void clickLogInButton() {
         logInButton.click();
+        waitForActionToBeCompleted();
     }
 
     public String getLogInWarning() {
-        waitVisibilityOfElement(3, logInFormText);
+        waitVisibilityOfElement(logInFormText);
         String warning = logInFormText.getText();
         return warning.substring(0, warning.indexOf('\n'));
     }

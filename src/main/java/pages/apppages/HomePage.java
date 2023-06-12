@@ -1,14 +1,17 @@
 package pages.apppages;
 
 import helpers.MouseHoverHelper;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class HomePage extends BasePage {
+
 
     MouseHoverHelper mouseHoverHelper = new MouseHoverHelper(driver);
 
@@ -24,7 +27,6 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "(//div[@class='header__locations-opener'])[1]")
     private WebElement currentLocationIconArrow;
 
-
     @FindBy(xpath = "//input[@data-test='search-city']")
     private WebElement enterYourCityInput;
 
@@ -34,11 +36,11 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//div[@class='_Xv5ePK']")
     private WebElement chooseYourStoreButton;
 
+    @FindBy(xpath = "//div[@class='header__burger']")
+    private WebElement catalogMenuBurger;
 
-
-
-
-
+    @FindBy(xpath = "//div[@class='catalog-menu__level-1-link']")
+    private List<WebElement> catalogMenuBurgerSectionsList;
 
 
 
@@ -63,29 +65,39 @@ public class HomePage extends BasePage {
     }
 
     public void clickCurrentLocationIcon() {
-        waitVisibilityOfElement(10, currentLocationIconArrow);
+        waitVisibilityOfElement(currentLocationIconArrow);
         currentLocationIconArrow.click();
     }
 
     public void enterYourCity(String yourCity) {
         enterYourCityInput.click();
         enterYourCityInput.sendKeys(yourCity);
-//        enterYourCityInput.sendKeys(Keys.ENTER);
-        waitForKeysToBeEntered(2);
-
+        waitForActionToBeCompleted();
     }
 
 
     public void chooseYourCityFromTheList() {
-
         mouseHoverHelper.hoverOverElement(chooseYourCityDropDownListElement);
         chooseYourCityDropDownListElement.click();
-
+        waitForActionToBeCompleted();
     }
 
     public void clickChooseYourStoreButton() {
-//        waitVisibilityOfElement(3, chooseYourStoreButton);
         chooseYourStoreButton.click();
+        waitForActionToBeCompleted();
+    }
+
+    public void clickCatalogMenuBurger(){
+        catalogMenuBurger.click();
+    }
+
+    public List<String> getCatalogMenuBurgerSectionsListTitles(){
+        List<String> titles = new ArrayList<>();
+        for (WebElement section : catalogMenuBurgerSectionsList) {
+            String title = section.getText();
+            titles.add(title);
+        }
+        return titles;
     }
 
 

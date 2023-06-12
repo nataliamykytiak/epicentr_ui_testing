@@ -17,7 +17,7 @@ public class LocationTests extends BaseTest{
     }
 
     @Test(dataProvider = "changeCurrentLocation")
-    public void changeCurrentLocationTest(String preselectedCity, String yourCity) throws InterruptedException {
+    public void changeCurrentLocationTest(String preselectedCity, String yourCity) {
         homePage.openHomePage(HOME_URL);
         Assert.assertEquals(homePage.getCurrentLocationIconText().toLowerCase(), preselectedCity.toLowerCase());
         homePage.clickCurrentLocationIcon();

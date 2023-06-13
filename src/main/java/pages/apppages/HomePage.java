@@ -1,6 +1,7 @@
 package pages.apppages;
 
 import helpers.MouseHoverHelper;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -41,6 +42,9 @@ public class HomePage extends BasePage {
 
     @FindBy(xpath = "//div[@class='catalog-menu__level-1-link']")
     private List<WebElement> catalogMenuBurgerSectionsList;
+
+    @FindBy(xpath = "//input[@type='text']")
+    private WebElement searchInputField;
 
 
 
@@ -98,6 +102,12 @@ public class HomePage extends BasePage {
             titles.add(title);
         }
         return titles;
+    }
+
+    public void enterProductNameInSearchInputField(String productName) {
+        searchInputField.click();
+        searchInputField.sendKeys(productName);
+        searchInputField.sendKeys(Keys.ENTER);
     }
 
 

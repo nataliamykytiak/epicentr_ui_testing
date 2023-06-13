@@ -3,9 +3,9 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/IdeaProjects/Epicentr_testing/src/test/java/tests">
         <classes>
-            <class name="tests.AuthorizationTests" />
+            <class name="tests.LogInTests" />
             <class name="tests.LocationTests"/>
-            <class name="tests.CatalogTests"></class>
+            <class name="tests.CatalogTests"/>
         </classes>
     </test>
 </suite>

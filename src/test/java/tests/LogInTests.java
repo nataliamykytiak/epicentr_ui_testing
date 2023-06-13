@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class AuthorizationTests extends BaseTest {
+public class LogInTests extends BaseTest {
 
     @DataProvider(name = "logInRegisteredUser")
     public static Object[][] logInRegisteredUserDataProvider() {

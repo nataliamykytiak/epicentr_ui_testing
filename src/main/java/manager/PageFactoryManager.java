@@ -1,9 +1,7 @@
 package manager;
 
 import org.openqa.selenium.WebDriver;
-import pages.apppages.HomePage;
-import pages.apppages.LogInPage;
-import pages.apppages.UserProfilePage;
+import pages.apppages.*;
 
 public class PageFactoryManager {
 
@@ -22,6 +20,22 @@ public class PageFactoryManager {
 
     public UserProfilePage getUserProfilePage() {
         return new UserProfilePage(driver);
+    }
+
+    public SearchResultsPage getSearchPage() {
+        return new SearchResultsPage(driver);
+    }
+
+    public CompareItemsPage getCompareItemsPage() {
+        return new CompareItemsPage(driver);
+    }
+
+    public WishListPage getWishListPage() {
+        return new WishListPage(driver);
+    }
+
+    public ProductPage getProductPage() {
+        return new ProductPage(driver);
     }
 
 }

@@ -3,8 +3,22 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import pages.apppages.*;
 
 public class LogInTests extends BaseTest {
+
+    private HomePage homePage;
+    private LogInPage logInPage;
+    private UserProfilePage userProfilePage;
+
+    @Override
+    public void testsSetUp() {
+        super.testsSetUp();
+        homePage = pageFactoryManager.getHomePage();
+        logInPage = pageFactoryManager.getLogInPage();
+        userProfilePage = pageFactoryManager.getUserProfilePage();
+    }
+
 
     @DataProvider(name = "logInRegisteredUser")
     public static Object[][] logInRegisteredUserDataProvider() {

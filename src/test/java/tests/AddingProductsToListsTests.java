@@ -1,10 +1,31 @@
 package tests;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import pages.apppages.*;
 
 public class AddingProductsToListsTests extends BaseTest {
+
+    private HomePage homePage;
+    private SearchResultsPage searchResultsPage;
+    private CompareItemsPage compareItemsPage;
+    private LogInPage logInPage;
+    private WishListPage wishListPage;
+
+    @Override
+    @BeforeTest
+    public void testsSetUp() {
+        super.testsSetUp();
+        homePage = pageFactoryManager.getHomePage();
+        logInPage = pageFactoryManager.getLogInPage();
+        searchResultsPage = pageFactoryManager.getSearchResultsPage();
+        compareItemsPage = pageFactoryManager.getCompareItemsPage();
+        wishListPage = pageFactoryManager.getWishListPage();
+    }
+
+
 
     @DataProvider(name = "checkTwoProductsAddedToCompareList")
     public static Object[][] checkTwoProductsAddedToCompareListDataProvider() {

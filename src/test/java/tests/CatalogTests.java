@@ -3,11 +3,20 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import pages.apppages.*;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class CatalogTests extends BaseTest{
+
+    private HomePage homePage;
+
+    @Override
+    public void testsSetUp() {
+        super.testsSetUp();
+        homePage = pageFactoryManager.getHomePage();
+    }
 
     @DataProvider(name = "checkCatalogSectionsTitles")
     public static Object[][] checkCatalogSectionsTitlesDataProvider() {

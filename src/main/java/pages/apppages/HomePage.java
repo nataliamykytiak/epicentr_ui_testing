@@ -4,6 +4,7 @@ import helpers.MouseHoverHelper;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
 
@@ -45,6 +46,9 @@ public class HomePage extends BasePage {
 
     @FindBy(xpath = "//input[@type='text']")
     private WebElement searchInputField;
+
+    @FindBy(xpath = "//span[@class='header__cart-counter']")
+    private List<WebElement> cartIcon;
 
 
 
@@ -108,6 +112,12 @@ public class HomePage extends BasePage {
         searchInputField.click();
         searchInputField.sendKeys(productName);
         searchInputField.sendKeys(Keys.ENTER);
+    }
+
+    public String getCartCounterValue(){
+        if (!cartIcon.isEmpty() && cartIcon.get(0).isDisplayed()) {
+            return cartIcon.get(0).getText();
+        } else return "0";
     }
 
 

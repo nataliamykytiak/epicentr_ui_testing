@@ -22,7 +22,7 @@ public class PageFactoryManager {
         return new UserProfilePage(driver);
     }
 
-    public SearchResultsPage getSearchPage() {
+    public SearchResultsPage getSearchResultsPage() {
         return new SearchResultsPage(driver);
     }
 
@@ -36,6 +36,10 @@ public class PageFactoryManager {
 
     public ProductPage getProductPage() {
         return new ProductPage(driver);
+    }
+
+    public CartPage getCartPage() {
+        return new CartPage(driver);
     }
 
 }

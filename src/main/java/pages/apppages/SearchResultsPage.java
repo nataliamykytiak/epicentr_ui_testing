@@ -24,6 +24,12 @@ public class SearchResultsPage extends BasePage {
     @FindBy(xpath = "//span[@class='header__whishes-link-icon']")
     private WebElement addToWishListHeaderIcon;
 
+    @FindBy(xpath = "//button[contains(@class,'js-btn--buy')][contains(text(),'Купити')]")
+    private List<WebElement> buyButtonsList;
+
+    @FindBy(xpath = "//span[@class='header__cart-counter']")
+    private WebElement cartIcon;
+
     public SearchResultsPage(WebDriver driver) {
         super(driver);
     }
@@ -42,10 +48,20 @@ public class SearchResultsPage extends BasePage {
 
     public void addProductToWishList(int number){
         searchResultsAddToWishListIconsList.get(number).click();
+        waitForActionToBeCompleted();
     }
 
     public void goToWishList(){
         addToWishListHeaderIcon.click();
+    }
+
+    public void pressBuyButtonToAddProductToCart(int number){
+        buyButtonsList.get(number).click();
+        waitForActionToBeCompleted();
+    }
+
+    public String getCartCounterValue(){
+        return cartIcon.getText();
     }
 
 

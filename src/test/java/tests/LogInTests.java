@@ -1,6 +1,8 @@
 package tests;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.apppages.*;
@@ -12,6 +14,7 @@ public class LogInTests extends BaseTest {
     private UserProfilePage userProfilePage;
 
     @Override
+    @BeforeTest
     public void testsSetUp() {
         super.testsSetUp();
         homePage = pageFactoryManager.getHomePage();

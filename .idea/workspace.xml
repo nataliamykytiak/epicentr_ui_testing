@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="51c19b21-10c4-40a6-8f8b-89d9c045a1b4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/PageFactoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/PageFactoryManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/ProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/SearchResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/SearchResultsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AddingProductsToListsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AddingProductsToListsTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/CatalogTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CatalogTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/LocationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LocationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/LogInTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LogInTests.java" afterDir="false" />
@@ -77,7 +72,7 @@
       <recent name="tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AddingProductsToCartTests.checkUserCanAddOneProductToCartTest">
+  <component name="RunManager" selected="TestNG.SearchTests.searchUsingEightDigitsCodeTest">
     <configuration name="AddingProductsToCartTests.checkUserCanAddOneProductToCartTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Epicentr_testing" />
       <extension name="coverage">
@@ -114,42 +109,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddingProductsToListsTests.checkAddingProductToWishListWhenUserIsAuthorizedTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Epicentr_testing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AddingProductsToListsTests" />
-      <option name="METHOD_NAME" value="checkAddingProductToWishListWhenUserIsAuthorizedTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddingProductsToListsTests.checkTwoProductsAddedToCompareListTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Epicentr_testing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AddingProductsToListsTests" />
-      <option name="METHOD_NAME" value="checkTwoProductsAddedToCompareListTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CatalogTests.checkCatalogSectionsTitlesTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Epicentr_testing" />
       <extension name="coverage">
@@ -168,13 +127,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LocationTests.changeCurrentLocationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Epicentr_testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LocationTests" />
+      <option name="METHOD_NAME" value="changeCurrentLocationTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearchTests.searchUsingEightDigitsCodeTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Epicentr_testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.SearchTests" />
+      <option name="METHOD_NAME" value="searchUsingEightDigitsCodeTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.SearchTests.searchUsingEightDigitsCodeTest" />
+        <item itemvalue="TestNG.LocationTests.changeCurrentLocationTest" />
         <item itemvalue="TestNG.AddingProductsToCartTests.checkUserCanAddOneProductToCartTest" />
-        <item itemvalue="TestNG.AddingProductsToListsTests.checkAddingProductToWishListFailsWhenUserIsNotAuthorizedTest" />
-        <item itemvalue="TestNG.AddingProductsToListsTests.checkAddingProductToWishListWhenUserIsAuthorizedTest" />
-        <item itemvalue="TestNG.AddingProductsToListsTests.checkTwoProductsAddedToCompareListTest" />
         <item itemvalue="TestNG.CatalogTests.checkCatalogSectionsTitlesTest" />
+        <item itemvalue="TestNG.AddingProductsToListsTests.checkAddingProductToWishListFailsWhenUserIsNotAuthorizedTest" />
       </list>
     </recent_temporary>
   </component>
@@ -306,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686688693054</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="optimized code - changed BaseTest class to abstract, rewrote setup methods. Added test that adds 1 item to the cart">
+      <created>1687030446538</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1687030446538</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -335,6 +337,7 @@
     <MESSAGE value="forgot mouse hover" />
     <MESSAGE value="fixed location test and added catalogTests class with 4th test" />
     <MESSAGE value="added tests about adding and removing from compare and wish lists" />
-    <option name="LAST_COMMIT_MESSAGE" value="added tests about adding and removing from compare and wish lists" />
+    <MESSAGE value="optimized code - changed BaseTest class to abstract, rewrote setup methods. Added test that adds 1 item to the cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimized code - changed BaseTest class to abstract, rewrote setup methods. Added test that adds 1 item to the cart" />
   </component>
 </project>

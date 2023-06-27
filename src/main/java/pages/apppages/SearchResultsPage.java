@@ -39,6 +39,9 @@ public class SearchResultsPage extends BasePage {
     @FindBy(xpath = "//label[@class='checkbox']")
     private List<WebElement> filterCategoryCheckboxList;
 
+    @FindBy(xpath = "//div[@class='checked-items__element']")
+    private List<WebElement> appliedFilters;
+
 
 
     public SearchResultsPage(WebDriver driver) {
@@ -88,6 +91,17 @@ public class SearchResultsPage extends BasePage {
 
     public void chooseSearchResultProduct(int foundProductOnAPage) {
         searchResultsListLinksToProductPages.get(foundProductOnAPage).click();
+    }
+
+    public void removeAppliedFilter(String filterName) {
+        for (WebElement filter : appliedFilters) {
+            if (filter.getText().equals(filterName)) {
+                helper.scrollToActiveElement(filter);
+                filter.click();
+                waitForActionToBeCompleted();
+                break;
+            }
+        }
     }
 
 }

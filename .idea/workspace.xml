@@ -6,16 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="51c19b21-10c4-40a6-8f8b-89d9c045a1b4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helpers/MouseHoverHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helpers/Helpers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/ProductPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/SearchResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/SearchResultsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AddingProductsToCartTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AddingProductsToCartTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AddingProductsToListsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AddingProductsToListsTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CatalogTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CatalogTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LocationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LocationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LogInTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LogInTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/SearchTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SearchTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +70,7 @@
       <recent name="tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SearchTests.searchUsingFiltersTest">
+  <component name="RunManager" selected="TestNG.SearchTests.searchForProductsApplyingTwoFiltersAndThenRemovingOneTest">
     <configuration name="AddingProductsToCartTests.checkUserCanAddOneProductToCartTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Epicentr_testing" />
       <extension name="coverage">
@@ -134,6 +125,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SearchTests.searchForProductsApplyingTwoFiltersAndThenRemovingOneTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Epicentr_testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.SearchTests" />
+      <option name="METHOD_NAME" value="searchForProductsApplyingTwoFiltersAndThenRemovingOneTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SearchTests.searchUsingEightDigitsCodeTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Epicentr_testing" />
       <extension name="coverage">
@@ -152,27 +161,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTests.searchUsingFiltersTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Epicentr_testing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.SearchTests" />
-      <option name="METHOD_NAME" value="searchUsingFiltersTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SearchTests.searchUsingFiltersTest" />
+        <item itemvalue="TestNG.SearchTests.searchForProductsApplyingTwoFiltersAndThenRemovingOneTest" />
         <item itemvalue="TestNG.SearchTests.searchUsingEightDigitsCodeTest" />
         <item itemvalue="TestNG.LocationTests.changeCurrentLocationTest" />
         <item itemvalue="TestNG.AddingProductsToCartTests.checkUserCanAddOneProductToCartTest" />
@@ -322,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687200243136</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="added 10. Перевірка додавання фільтрів при пошуку товару">
+      <created>1687892523913</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1687892523913</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -353,14 +351,15 @@
     <MESSAGE value="added tests about adding and removing from compare and wish lists" />
     <MESSAGE value="optimized code - changed BaseTest class to abstract, rewrote setup methods. Added test that adds 1 item to the cart" />
     <MESSAGE value="added searchUsingEightDigitsCodeTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="added searchUsingEightDigitsCodeTest" />
+    <MESSAGE value="added 10. Перевірка додавання фільтрів при пошуку товару" />
+    <option name="LAST_COMMIT_MESSAGE" value="added 10. Перевірка додавання фільтрів при пошуку товару" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/tests/SearchTests.java</url>
-          <line>47</line>
+          <line>57</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

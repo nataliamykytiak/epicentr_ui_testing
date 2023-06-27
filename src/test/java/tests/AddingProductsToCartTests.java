@@ -32,7 +32,8 @@ public class AddingProductsToCartTests extends BaseTest {
         };
     }
 
-    @Test(dataProvider = "checkUserCanAddOneProductToCart")
+    @Test(dataProvider = "checkUserCanAddOneProductToCart",
+            description = "8. Перевірка додавання товарів до кошика, коли користувач не авторизований")
     public void checkUserCanAddOneProductToCartTest(String emptyCartValue, String productName, int productNumber,
                                                     String cartHeadline, String afterAddingCartValue) {
         homePage.openHomePage(HOME_URL);

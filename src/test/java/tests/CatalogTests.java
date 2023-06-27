@@ -32,7 +32,7 @@ public class CatalogTests extends BaseTest{
         };
     }
 
-    @Test(dataProvider = "checkCatalogSectionsTitles")
+    @Test(dataProvider = "checkCatalogSectionsTitles", description = "4. Перевірка розділів в каталозі меню")
     public void checkCatalogSectionsTitlesTest(List<String> expectedTitles){
         homePage.openHomePage(HOME_URL);
         homePage.clickCatalogMenuBurger();

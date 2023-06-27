@@ -54,7 +54,7 @@ public class AddingProductsToListsTests extends BaseTest {
         };
     }
 
-    @Test(dataProvider = "checkTwoProductsAddedToCompareList")
+    @Test(dataProvider = "checkTwoProductsAddedToCompareList", description = "5. Перевірка додавання товарів до порівняння")
     public void checkTwoProductsAddedToCompareListTest(String productName, int firstProduct, int secondProduct,
                                                        String emptyCompareListMessage){
         homePage.openHomePage(HOME_URL);
@@ -70,7 +70,8 @@ public class AddingProductsToListsTests extends BaseTest {
         Assert.assertTrue(compareItemsPage.getSorryYouHaveNotAddedMessageText().contains(emptyCompareListMessage));
     }
 
-    @Test(dataProvider = "checkAddingProductToWishListFailsWhenUserIsNotAuthorized")
+    @Test(dataProvider = "checkAddingProductToWishListFailsWhenUserIsNotAuthorized",
+            description = "7. Перевірка додавання товарів до обраних, коли користувач не авторизований")
     public void checkAddingProductToWishListFailsWhenUserIsNotAuthorizedTest(String productName, int product,
                                                        String welcomeMessage){
         homePage.openHomePage(HOME_URL);
@@ -80,7 +81,8 @@ public class AddingProductsToListsTests extends BaseTest {
         Assert.assertEquals(logInPage.getLogInWelcomeText(), welcomeMessage);
     }
 
-    @Test(dataProvider = "checkAddingProductToWishListWhenUserIsAuthorized")
+    @Test(dataProvider = "checkAddingProductToWishListWhenUserIsAuthorized",
+            description = "6. Перевірка додавання товарів до обраних, коли користувач авторизований")
     public void checkAddingProductToWishListWhenUserIsAuthorizedTest(String phoneNumber, String userPassword,
                                                                      String productName, int firstProduct,
                                                                      int secondProduct, int thirdProduct,

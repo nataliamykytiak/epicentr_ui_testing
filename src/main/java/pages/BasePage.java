@@ -1,13 +1,12 @@
 package pages;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class BasePage {
@@ -40,7 +39,8 @@ public class BasePage {
     }
 
     public void waitForActionToBeCompleted() {
-        new WebDriverWait(driver, Duration.ofSeconds(ACTION_TIMEOUT)).until(driver -> {
+        new WebDriverWait(driver, Duration.ofSeconds(ACTION_TIMEOUT)).ignoring(StaleElementReferenceException.class)
+                .until(driver -> {
             try {
                 TimeUnit.SECONDS.sleep(ACTION_TIMEOUT);
                 return true;
@@ -50,5 +50,12 @@ public class BasePage {
             }
         });
     }
+
+    public List<WebElement> waitForAllElementsToBeLocated(String xPath) {
+        return new WebDriverWait(driver, Duration.ofSeconds(ACTION_TIMEOUT))
+                .until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(xPath)));
+    }
+
+
 
 }

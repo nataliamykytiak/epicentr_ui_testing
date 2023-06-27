@@ -1,7 +1,6 @@
 package tests;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -42,7 +41,7 @@ public class LogInTests extends BaseTest {
     }
 
 
-    @Test(dataProvider = "logInRegisteredUser")
+    @Test(dataProvider = "logInRegisteredUser", description = "1. Перевірка авторизації як зареєстрований користувач")
     public void loginWithValidCredentialsAsARegisteredUserTest(final String phoneNumber, String userPassword,
                                                                  String userName, String logInButtonName) {
         homePage.openHomePage(HOME_URL);
@@ -56,7 +55,7 @@ public class LogInTests extends BaseTest {
         Assert.assertEquals(homePage.getLogInIconText(), logInButtonName);
     }
 
-    @Test(dataProvider = "logInNotRegisteredUser")
+    @Test(dataProvider = "logInNotRegisteredUser", description = "2. Перевірка авторизації як незареєстрований користувач")
     public void loginAsNotRegisteredUserTest(final String phoneNumber, String userPassword, String warning) {
         homePage.openHomePage(HOME_URL);
         homePage.clickLogInIcon();

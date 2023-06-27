@@ -1,10 +1,9 @@
 package pages.apppages;
 
-import helpers.MouseHoverHelper;
+import helpers.Helpers;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
 
@@ -15,7 +14,7 @@ import java.util.List;
 public class HomePage extends BasePage {
 
 
-    MouseHoverHelper mouseHoverHelper = new MouseHoverHelper(driver);
+    Helpers helper = new Helpers(driver);
 
     @FindBy(xpath = "//span[@class='header__login-opener-icon']")
     private WebElement logInIcon;
@@ -85,7 +84,7 @@ public class HomePage extends BasePage {
 
 
     public void chooseYourCityFromTheList() {
-        mouseHoverHelper.hoverOverElement(chooseYourCityDropDownListElement);
+        helper.hoverOverElement(chooseYourCityDropDownListElement);
         chooseYourCityDropDownListElement.click();
         waitForActionToBeCompleted();
     }

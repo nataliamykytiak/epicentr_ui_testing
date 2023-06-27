@@ -27,7 +27,7 @@ public class LocationTests extends BaseTest{
         };
     }
 
-    @Test(dataProvider = "changeCurrentLocation")
+    @Test(dataProvider = "changeCurrentLocation", description = "3. Перевірка зміни локації користувача")
     public void changeCurrentLocationTest(String preselectedCity, String yourCity) {
         homePage.openHomePage(HOME_URL);
         Assert.assertEquals(homePage.getCurrentLocationIconText().toLowerCase(), preselectedCity.toLowerCase());

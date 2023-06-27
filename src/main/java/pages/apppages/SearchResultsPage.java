@@ -1,5 +1,6 @@
 package pages.apppages;
 
+import helpers.Helpers;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,8 +10,13 @@ import java.util.List;
 
 public class SearchResultsPage extends BasePage {
 
+    Helpers helper = new Helpers(driver);
+
     @FindBy(xpath = "//div[@class='columns product-Wrap card-wrapper ']")
     private List<WebElement> searchResultsList;
+
+    @FindBy(xpath = "//div[@class='columns product-Wrap card-wrapper ']//a[@class='card__photo']")
+    private List<WebElement> searchResultsListLinksToProductPages;
 
     @FindBy(xpath = "//*[@data-tooltip-text='до порiвняння']")
     private List<WebElement> searchResultsAddToCompareListIconsList;
@@ -29,6 +35,11 @@ public class SearchResultsPage extends BasePage {
 
     @FindBy(xpath = "//span[@class='header__cart-counter']")
     private WebElement cartIcon;
+
+    @FindBy(xpath = "//label[@class='checkbox']")
+    private List<WebElement> filterCategoryCheckboxList;
+
+
 
     public SearchResultsPage(WebDriver driver) {
         super(driver);
@@ -64,6 +75,19 @@ public class SearchResultsPage extends BasePage {
         return cartIcon.getText();
     }
 
+    public void chooseFilterCheckbox(String checkboxName) {
+        for (WebElement checkbox : filterCategoryCheckboxList) {
+            if (checkbox.getText().equals(checkboxName)) {
+                helper.scrollToActiveElement(checkbox);
+                checkbox.click();
+                waitForActionToBeCompleted();
+                break;
+            }
+        }
+    }
 
+    public void chooseSearchResultProduct(int foundProductOnAPage) {
+        searchResultsListLinksToProductPages.get(foundProductOnAPage).click();
+    }
 
 }

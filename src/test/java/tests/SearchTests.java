@@ -31,6 +31,18 @@ public class SearchTests extends BaseTest {
         return new Object[][] {
                 {
                         "10109711", "Диск Sturm для тримера"
+                },
+                {
+                         "80389447", "Стіл обідній Boston"
+                },
+                {
+                         "51625945", "Сковорода Grand Chef 28 см"
+                },
+                {
+                         "80384090", "Диван прямий Кедр Торонто блакитний"
+                },
+                {
+                         "80922041", "Кросівки Adidas"
                 }
         };
     }
@@ -40,6 +52,18 @@ public class SearchTests extends BaseTest {
         return new Object[][] {
                 {
                         "герметик", "гідроізоляційний", "для сантехніки", 0
+                },
+                {
+                        "постільна білизна комплект", "двоспальний", "бавовна", 5
+                },
+                {
+                        "змішувач для душу", "настінний", "з термостатом", 14
+                },
+                {
+                        "горщик для квітів", "для бонсай", "овальний", 5
+                },
+                {
+                        "стелаж", "метал", "багатоцільове", 18
                 }
         };
     }
@@ -49,6 +73,18 @@ public class SearchTests extends BaseTest {
         return new Object[][] {
                 {
                         "клей для плитки", "підлога", "для ванної кімнати", 0
+                },
+                {
+                        "папір офісний", "А4", "для принтера/копіра", 0
+                },
+                {
+                        "круг відрізний", "по металу", "125", 2
+                },
+                {
+                        "штучна трава", "з коротким ворсом", "2", 7
+                },
+                {
+                        "пральний порошок", "для машинного прання", "антибактеріальний", 7
                 }
         };
     }
@@ -70,6 +106,7 @@ public class SearchTests extends BaseTest {
         searchResultsPage.chooseFilterCheckbox(secondFilter);
         searchResultsPage.chooseSearchResultProduct(foundProduct);
         productPage.chooseProductCharacteristicsMenuSection();
+        System.out.println(productPage.getProductDescription());
         Assert.assertTrue(productPage.getProductDescription().contains(firstFilter));
         Assert.assertTrue(productPage.getProductDescription().contains(secondFilter));
     }
@@ -85,6 +122,7 @@ public class SearchTests extends BaseTest {
         searchResultsPage.removeAppliedFilter(firstFilter);
         searchResultsPage.chooseSearchResultProduct(foundProduct);
         productPage.chooseProductCharacteristicsMenuSection();
+        System.out.println(productPage.getProductDescription());
         if (productPage.getProductDescription().contains(firstFilter)) {
             Assert.assertTrue(productPage.getProductDescription().contains(secondFilter));
         } else {

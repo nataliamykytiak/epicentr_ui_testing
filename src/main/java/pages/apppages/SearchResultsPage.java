@@ -44,6 +44,7 @@ public class SearchResultsPage extends BasePage {
 
 
 
+
     public SearchResultsPage(WebDriver driver) {
         super(driver);
     }
@@ -102,6 +103,10 @@ public class SearchResultsPage extends BasePage {
                 break;
             }
         }
+    }
+
+    public void clickCartIcon() {
+        cartIcon.click();
     }
 
 }

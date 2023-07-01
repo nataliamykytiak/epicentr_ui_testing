@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="51c19b21-10c4-40a6-8f8b-89d9c045a1b4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/CartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/ProductPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/SearchResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/SearchResultsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AddingProductsToCartTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AddingProductsToCartTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LogInTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LogInTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/SearchTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SearchTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +74,7 @@
       <recent name="tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SearchTests.searchForProductsApplyingTwoFiltersAndThenRemovingOneTest">
+  <component name="RunManager" selected="TestNG.AddingProductsToCartTests.checkUserCanAddOneProductToCartTest">
     <configuration name="AddingProductsToCartTests.checkUserCanAddOneProductToCartTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Epicentr_testing" />
       <extension name="coverage">
@@ -89,7 +93,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CatalogTests.checkCatalogSectionsTitlesTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LogInTests.loginAsNotRegisteredUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Epicentr_testing" />
       <extension name="coverage">
         <pattern>
@@ -98,26 +102,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CatalogTests" />
-      <option name="METHOD_NAME" value="checkCatalogSectionsTitlesTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LocationTests.changeCurrentLocationTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Epicentr_testing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LocationTests" />
-      <option name="METHOD_NAME" value="changeCurrentLocationTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.LogInTests" />
+      <option name="METHOD_NAME" value="loginAsNotRegisteredUserTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -136,6 +122,24 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.SearchTests" />
       <option name="METHOD_NAME" value="searchForProductsApplyingTwoFiltersAndThenRemovingOneTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearchTests.searchForProductsApplyingTwoFiltersTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Epicentr_testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.SearchTests" />
+      <option name="METHOD_NAME" value="searchForProductsApplyingTwoFiltersTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -163,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SearchTests.searchForProductsApplyingTwoFiltersAndThenRemovingOneTest" />
-        <item itemvalue="TestNG.SearchTests.searchUsingEightDigitsCodeTest" />
-        <item itemvalue="TestNG.LocationTests.changeCurrentLocationTest" />
         <item itemvalue="TestNG.AddingProductsToCartTests.checkUserCanAddOneProductToCartTest" />
-        <item itemvalue="TestNG.CatalogTests.checkCatalogSectionsTitlesTest" />
+        <item itemvalue="TestNG.LogInTests.loginAsNotRegisteredUserTest" />
+        <item itemvalue="TestNG.SearchTests.searchForProductsApplyingTwoFiltersAndThenRemovingOneTest" />
+        <item itemvalue="TestNG.SearchTests.searchForProductsApplyingTwoFiltersTest" />
+        <item itemvalue="TestNG.SearchTests.searchUsingEightDigitsCodeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -320,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687892523913</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="added 11. Перевірка додавання і очищення фільтрів при пошуку товару">
+      <created>1687894773103</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1687894773103</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -352,17 +363,7 @@
     <MESSAGE value="optimized code - changed BaseTest class to abstract, rewrote setup methods. Added test that adds 1 item to the cart" />
     <MESSAGE value="added searchUsingEightDigitsCodeTest" />
     <MESSAGE value="added 10. Перевірка додавання фільтрів при пошуку товару" />
-    <option name="LAST_COMMIT_MESSAGE" value="added 10. Перевірка додавання фільтрів при пошуку товару" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/SearchTests.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="added 11. Перевірка додавання і очищення фільтрів при пошуку товару" />
+    <option name="LAST_COMMIT_MESSAGE" value="added 11. Перевірка додавання і очищення фільтрів при пошуку товару" />
   </component>
 </project>

@@ -1,9 +1,7 @@
 package tests;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.apppages.CartPage;
 import pages.apppages.HomePage;
 import pages.apppages.SearchResultsPage;
@@ -23,11 +21,30 @@ public class AddingProductsToCartTests extends BaseTest {
         cartPage = pageFactoryManager.getCartPage();
     }
 
+
+    @AfterMethod
+    public void clearCart() {
+        searchResultsPage.clickCartIcon();
+        cartPage.pressDeleteProductFromCartIcon();
+    }
+
     @DataProvider(name = "checkUserCanAddOneProductToCart")
     public static Object[][] checkUserCanAddOneProductToCartDataProvider() {
         return new Object[][] {
                 {
                         "0", "сукня літня", 0, "ВАШ КОШИК ТОВАРІВ", "1"
+                },
+                {
+                        "0", "моторне мастило", 3, "ВАШ КОШИК ТОВАРІВ", "1"
+                },
+                {
+                        "0", "електрочайник", 20, "ВАШ КОШИК ТОВАРІВ", "1"
+                },
+                {
+                        "0", "басейн надувний", 4, "ВАШ КОШИК ТОВАРІВ", "1"
+                },
+                {
+                        "0", "ламінат", 7, "ВАШ КОШИК ТОВАРІВ", "1"
                 }
         };
     }

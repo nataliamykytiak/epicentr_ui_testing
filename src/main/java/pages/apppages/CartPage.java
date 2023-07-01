@@ -14,6 +14,9 @@ public class CartPage extends BasePage {
     @FindBy(xpath = "//button[contains(text(),'Продовжити покупки')]")
     private WebElement continueShoppingButton;
 
+    @FindBy(xpath = "//button[@class='basket-product__del--link']")
+    private WebElement deleteProductFromCartIcon;
+
     public CartPage(WebDriver driver) {
         super(driver);
     }
@@ -26,4 +29,11 @@ public class CartPage extends BasePage {
         continueShoppingButton.click();
         waitForActionToBeCompleted();
     }
+
+    public void pressDeleteProductFromCartIcon() {
+        waitForActionToBeCompleted();
+        deleteProductFromCartIcon.click();
+    }
+
+
 }

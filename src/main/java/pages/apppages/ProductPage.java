@@ -10,7 +10,7 @@ public class ProductPage extends BasePage {
     @FindBy(xpath = "//h1")
     private WebElement productName;
 
-    @FindBy(xpath = "(//div[@class='p-slap__content'])[2]")
+    @FindBy(xpath = "//div[@id='CHAR']")
     private WebElement productDescription;
 
     @FindBy(xpath = "(//div[@data-scroll='CHAR'])[1]")

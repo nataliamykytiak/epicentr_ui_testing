@@ -6,12 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="51c19b21-10c4-40a6-8f8b-89d9c045a1b4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/CartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/ProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/SearchResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/SearchResultsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AddingProductsToCartTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AddingProductsToCartTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LogInTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LogInTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/SearchTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SearchTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AddingProductsToListsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AddingProductsToListsTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CatalogTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CatalogTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LocationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LocationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,8 +72,8 @@
       <recent name="tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AddingProductsToCartTests.checkUserCanAddOneProductToCartTest">
-    <configuration name="AddingProductsToCartTests.checkUserCanAddOneProductToCartTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.LocationTests.changeCurrentLocationTest">
+    <configuration name="AddingProductsToListsTests.checkAddingProductToWishListFailsWhenUserIsNotAuthorizedTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Epicentr_testing" />
       <extension name="coverage">
         <pattern>
@@ -84,8 +82,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AddingProductsToCartTests" />
-      <option name="METHOD_NAME" value="checkUserCanAddOneProductToCartTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.AddingProductsToListsTests" />
+      <option name="METHOD_NAME" value="checkAddingProductToWishListFailsWhenUserIsNotAuthorizedTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -93,7 +91,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LogInTests.loginAsNotRegisteredUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AddingProductsToListsTests.checkAddingProductToWishListWhenUserIsAuthorizedTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Epicentr_testing" />
       <extension name="coverage">
         <pattern>
@@ -102,8 +100,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LogInTests" />
-      <option name="METHOD_NAME" value="loginAsNotRegisteredUserTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.AddingProductsToListsTests" />
+      <option name="METHOD_NAME" value="checkAddingProductToWishListWhenUserIsAuthorizedTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -111,7 +109,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTests.searchForProductsApplyingTwoFiltersAndThenRemovingOneTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AddingProductsToListsTests.checkTwoProductsAddedToCompareListTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Epicentr_testing" />
       <extension name="coverage">
         <pattern>
@@ -120,8 +118,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.SearchTests" />
-      <option name="METHOD_NAME" value="searchForProductsApplyingTwoFiltersAndThenRemovingOneTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.AddingProductsToListsTests" />
+      <option name="METHOD_NAME" value="checkTwoProductsAddedToCompareListTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -129,7 +127,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTests.searchForProductsApplyingTwoFiltersTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CatalogTests.checkCatalogSectionsTitlesTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Epicentr_testing" />
       <extension name="coverage">
         <pattern>
@@ -138,8 +136,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.SearchTests" />
-      <option name="METHOD_NAME" value="searchForProductsApplyingTwoFiltersTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.CatalogTests" />
+      <option name="METHOD_NAME" value="checkCatalogSectionsTitlesTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -147,7 +145,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTests.searchUsingEightDigitsCodeTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LocationTests.changeCurrentLocationTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Epicentr_testing" />
       <extension name="coverage">
         <pattern>
@@ -156,8 +154,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.SearchTests" />
-      <option name="METHOD_NAME" value="searchUsingEightDigitsCodeTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.LocationTests" />
+      <option name="METHOD_NAME" value="changeCurrentLocationTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -167,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AddingProductsToCartTests.checkUserCanAddOneProductToCartTest" />
-        <item itemvalue="TestNG.LogInTests.loginAsNotRegisteredUserTest" />
-        <item itemvalue="TestNG.SearchTests.searchForProductsApplyingTwoFiltersAndThenRemovingOneTest" />
-        <item itemvalue="TestNG.SearchTests.searchForProductsApplyingTwoFiltersTest" />
-        <item itemvalue="TestNG.SearchTests.searchUsingEightDigitsCodeTest" />
+        <item itemvalue="TestNG.LocationTests.changeCurrentLocationTest" />
+        <item itemvalue="TestNG.CatalogTests.checkCatalogSectionsTitlesTest" />
+        <item itemvalue="TestNG.AddingProductsToListsTests.checkAddingProductToWishListWhenUserIsAuthorizedTest" />
+        <item itemvalue="TestNG.AddingProductsToListsTests.checkAddingProductToWishListFailsWhenUserIsNotAuthorizedTest" />
+        <item itemvalue="TestNG.AddingProductsToListsTests.checkTwoProductsAddedToCompareListTest" />
       </list>
     </recent_temporary>
   </component>
@@ -331,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687894773103</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="added test data to data providers for tests №2, 8, 9, 10, 11">
+      <created>1688244890669</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1688244890669</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -364,6 +369,7 @@
     <MESSAGE value="added searchUsingEightDigitsCodeTest" />
     <MESSAGE value="added 10. Перевірка додавання фільтрів при пошуку товару" />
     <MESSAGE value="added 11. Перевірка додавання і очищення фільтрів при пошуку товару" />
-    <option name="LAST_COMMIT_MESSAGE" value="added 11. Перевірка додавання і очищення фільтрів при пошуку товару" />
+    <MESSAGE value="added test data to data providers for tests №2, 8, 9, 10, 11" />
+    <option name="LAST_COMMIT_MESSAGE" value="added test data to data providers for tests №2, 8, 9, 10, 11" />
   </component>
 </project>

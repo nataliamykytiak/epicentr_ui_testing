@@ -37,7 +37,7 @@ public class CatalogTests extends BaseTest{
         homePage.openHomePage(HOME_URL);
         homePage.clickCatalogMenuBurger();
         List<String> actualTitles = homePage.getCatalogMenuBurgerSectionsListTitles();
+        System.out.println(homePage.getCatalogMenuBurgerSectionsListTitles());
         Assert.assertEquals(actualTitles, expectedTitles);
-
     }
 }

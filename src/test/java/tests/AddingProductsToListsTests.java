@@ -1,6 +1,7 @@
 package tests;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -13,6 +14,7 @@ public class AddingProductsToListsTests extends BaseTest {
     private CompareItemsPage compareItemsPage;
     private LogInPage logInPage;
     private WishListPage wishListPage;
+    private UserProfilePage userProfilePage;
 
     @Override
     @BeforeTest
@@ -23,7 +25,14 @@ public class AddingProductsToListsTests extends BaseTest {
         searchResultsPage = pageFactoryManager.getSearchResultsPage();
         compareItemsPage = pageFactoryManager.getCompareItemsPage();
         wishListPage = pageFactoryManager.getWishListPage();
+        userProfilePage = pageFactoryManager.getUserProfilePage();
     }
+
+    @AfterMethod(description = "6. Перевірка додавання товарів до обраних, коли користувач авторизований")
+    public void logOut() {
+        userProfilePage.clickLogOutButton();
+    }
+
 
 
 
@@ -32,7 +41,19 @@ public class AddingProductsToListsTests extends BaseTest {
         return new Object[][] {
                 {
                         "граблі віялові", 0, 1, "Вибачте, але Ви ще нічого не додали в порівняння"
-                }
+                },
+                {
+                        "засіб для миття підлоги", 5, 1, "Вибачте, але Ви ще нічого не додали в порівняння"
+                },
+                {
+                        "мішок поліпропіленовий", 6, 14, "Вибачте, але Ви ще нічого не додали в порівняння"
+                },
+                {
+                        "насос дренажний", 11, 6, "Вибачте, але Ви ще нічого не додали в порівняння"
+                },
+                {
+                        "валіза на колесах", 13, 14, "Вибачте, але Ви ще нічого не додали в порівняння"
+                },
         };
     }
 
@@ -41,7 +62,19 @@ public class AddingProductsToListsTests extends BaseTest {
         return new Object[][] {
                 {
                         "моторне мастило", 0, "Ласкаво просимо до epicentrk.ua!"
-                }
+                },
+                {
+                        "плитка гіпсова", 17, "Ласкаво просимо до epicentrk.ua!"
+                },
+                {
+                        "човен надувний", 3, "Ласкаво просимо до epicentrk.ua!"
+                },
+                {
+                        "килимок для йоги", 3, "Ласкаво просимо до epicentrk.ua!"
+                },
+                {
+                        "телевізор", 21, "Ласкаво просимо до epicentrk.ua!"
+                },
         };
     }
 
@@ -50,7 +83,20 @@ public class AddingProductsToListsTests extends BaseTest {
         return new Object[][] {
                 {
                         "938702483", "Nataliia.1", "корм для собак", 0, 1, 2, "Вибачте, але Ви ще нічого не додали до «Бажань»"
-                }
+                },
+                {
+                        "938702483", "Nataliia.1", "бойлер", 13, 8, 0, "Вибачте, але Ви ще нічого не додали до «Бажань»"
+                },
+                {
+                        "938702483", "Nataliia.1", "шланг для поливу", 19, 20, 13, "Вибачте, але Ви ще нічого не додали до «Бажань»"
+                },
+                {
+                        "938702483", "Nataliia.1", "вентилятор", 8, 15, 13, "Вибачте, але Ви ще нічого не додали до «Бажань»"
+                },
+                {
+                        "938702483", "Nataliia.1", "піна монтажна", 3, 6, 16, "Вибачте, але Ви ще нічого не додали до «Бажань»"
+                },
+
         };
     }
 

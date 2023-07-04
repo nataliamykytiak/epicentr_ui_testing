@@ -72,7 +72,7 @@ public class HomePage extends BasePage {
     }
 
     public void clickCurrentLocationIcon() {
-        waitVisibilityOfElement(currentLocationIconArrow);
+//        waitVisibilityOfElement(currentLocationIconArrow);
         currentLocationIconArrow.click();
     }
 

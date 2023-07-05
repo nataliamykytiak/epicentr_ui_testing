@@ -9,8 +9,10 @@ import pages.apppages.HomePage;
 import pages.apppages.ProductPage;
 import pages.apppages.SearchResultsPage;
 
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
+
 
 public class SearchTests extends BaseTest {
 
@@ -101,6 +103,15 @@ public class SearchTests extends BaseTest {
         };
     }
 
+    @DataProvider(name = "searchForProductsApplyingFilterByPrice")
+    public static Object[][] searchForProductsApplyingFilterByPriceDataProvider() {
+        return new Object[][] {
+                {
+                        "пилосос ручний", "10000", "5000"
+                }
+        };
+    }
+
     @Test(dataProvider = "searchUsingEightDigitsCode", description = "9. Перевірка пошуку за 8-значним кодом товару")
     public void searchUsingEightDigitsCodeTest(String eightDigitCode, String testProductName) {
         homePage.openHomePage(HOME_URL);
@@ -150,11 +161,30 @@ public class SearchTests extends BaseTest {
         homePage.openHomePage(HOME_URL);
         homePage.enterProductNameInSearchInputField(productName);
         searchResultsPage.clickFilterButtonSortAscending();
-        Assert.assertEquals(searchResultsPage.sortProductPricesInAscendingOrder(searchResultsPage.getSearchResultsListPrices()),
-                            searchResultsPage.getSearchResultsListPrices());
+        List<String> ascendingSorted = new ArrayList<>(searchResultsPage.getSearchResultsListPrices());
+        ascendingSorted.sort(Comparator.comparingDouble(Double::parseDouble));
+        Assert.assertEquals(searchResultsPage.getSearchResultsListPrices(), ascendingSorted);
         searchResultsPage.clickFilterButtonSortDescending();
-        Assert.assertEquals(searchResultsPage.sortProductPricesInDescendingOrder(searchResultsPage.getSearchResultsListPrices()),
-                searchResultsPage.getSearchResultsListPrices());
+        List<String> descendingSorted = new ArrayList<>(searchResultsPage.getSearchResultsListPrices());
+        descendingSorted.sort(Comparator.comparingDouble(Double::parseDouble).reversed());
+        Assert.assertEquals(searchResultsPage.getSearchResultsListPrices(), descendingSorted);
+    }
+
+    @Test(dataProvider = "searchForProductsApplyingFilterByPrice",
+            description = "13. Перевірка фільтрування по ціні при пошуку товару")
+    public void searchForProductsApplyingFilterByPrice(String productName, String maxPrice, String minPrice) {
+        homePage.openHomePage(HOME_URL);
+        homePage.enterProductNameInSearchInputField(productName);
+        searchResultsPage.setMaxValueForSearchResults(maxPrice);
+        List<String> smallerValues = searchResultsPage.getSearchResultsListPrices();
+        smallerValues.sort(Comparator.comparingDouble(Double::parseDouble));
+        double lastPrice = Double.parseDouble(smallerValues.get(smallerValues.size()-1));
+        Assert.assertTrue(lastPrice <= Double.parseDouble(maxPrice));
+        searchResultsPage.setMinValueForSearchResults(minPrice);
+        List<String> greaterValues = searchResultsPage.getSearchResultsListPrices();
+        greaterValues.sort(Comparator.comparingDouble(Double::parseDouble));
+        double firstPrice = Double.parseDouble(greaterValues.get(0));
+        Assert.assertTrue(firstPrice >= Double.parseDouble(minPrice));
     }
 
 

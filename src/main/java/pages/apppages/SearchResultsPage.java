@@ -7,8 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class SearchResultsPage extends BasePage {
@@ -51,8 +49,14 @@ public class SearchResultsPage extends BasePage {
     @FindBy(xpath = "//div[@class='show-for-large']//a[@data-href='desc']")
     private WebElement filterButtonSortDescending;
 
-    @FindBy(xpath = "//div[@class='columns product-Wrap card-wrapper ']//span[@class='card__price-sum']")
+    @FindBy(xpath = "//div[@class='columns product-Wrap card-wrapper  ']//span[@class='card__price-sum']")
     private List<WebElement> searchResultsListPrices;
+
+    @FindBy(xpath = "//input[@class='range-slider__input min-price']")
+    private WebElement priceSliderMinValue;
+
+    @FindBy(xpath = "//input[@class='range-slider__input max-price']")
+    private WebElement priceSliderMaxValue;
 
 
 
@@ -140,17 +144,22 @@ public class SearchResultsPage extends BasePage {
         return productPrices;
     }
 
-    public List<String> sortProductPricesInAscendingOrder(List<String> prices) {
-        List<String> ascendingSorted = new ArrayList<>(prices);
-        ascendingSorted.sort(Comparator.comparingDouble(Double::parseDouble));
-        return ascendingSorted;
+    public void setMinValueForSearchResults(String minValue) {
+        helper.scrollToActiveElement(priceSliderMinValue);
+        priceSliderMinValue.clear();
+        priceSliderMinValue.sendKeys(minValue);
+        waitForActionToBeCompleted();
     }
 
-    public List<String> sortProductPricesInDescendingOrder(List<String> prices) {
-        List<String> descendingSorted = new ArrayList<>(prices);
-        descendingSorted.sort(Comparator.comparingDouble(Double::parseDouble).reversed());
-        return descendingSorted;
+    public void setMaxValueForSearchResults(String maxValue) {
+        helper.scrollToActiveElement(priceSliderMaxValue);
+        priceSliderMaxValue.clear();
+        priceSliderMaxValue.sendKeys(maxValue);
+        waitForActionToBeCompleted();
     }
+
+
+
 
 
 

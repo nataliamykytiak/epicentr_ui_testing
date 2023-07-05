@@ -15,7 +15,7 @@ public class BasePage {
 
     protected static final long PAGE_LOAD_TIMEOUT = 10;
 
-    protected static final long ACTION_TIMEOUT = 3;
+    protected static final long ACTION_TIMEOUT = 10;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;

@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="51c19b21-10c4-40a6-8f8b-89d9c045a1b4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AddingProductsToListsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AddingProductsToListsTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CatalogTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CatalogTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LocationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LocationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/SearchResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/SearchResultsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/SearchTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SearchTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +70,7 @@
       <recent name="tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LocationTests.changeCurrentLocationTest">
+  <component name="RunManager" selected="TestNG.SearchTests.searchForProductsApplyingSortingByPriceAscendingThenDescending">
     <configuration name="AddingProductsToListsTests.checkAddingProductToWishListFailsWhenUserIsNotAuthorizedTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Epicentr_testing" />
       <extension name="coverage">
@@ -102,24 +100,6 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.AddingProductsToListsTests" />
       <option name="METHOD_NAME" value="checkAddingProductToWishListWhenUserIsAuthorizedTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddingProductsToListsTests.checkTwoProductsAddedToCompareListTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Epicentr_testing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AddingProductsToListsTests" />
-      <option name="METHOD_NAME" value="checkTwoProductsAddedToCompareListTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -163,13 +143,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SearchTests.searchForProductsApplyingSortingByPriceAscendingThenDescending" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Epicentr_testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.SearchTests" />
+      <option name="METHOD_NAME" value="searchForProductsApplyingSortingByPriceAscendingThenDescending" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.SearchTests.searchForProductsApplyingSortingByPriceAscendingThenDescending" />
         <item itemvalue="TestNG.LocationTests.changeCurrentLocationTest" />
         <item itemvalue="TestNG.CatalogTests.checkCatalogSectionsTitlesTest" />
         <item itemvalue="TestNG.AddingProductsToListsTests.checkAddingProductToWishListWhenUserIsAuthorizedTest" />
         <item itemvalue="TestNG.AddingProductsToListsTests.checkAddingProductToWishListFailsWhenUserIsNotAuthorizedTest" />
-        <item itemvalue="TestNG.AddingProductsToListsTests.checkTwoProductsAddedToCompareListTest" />
       </list>
     </recent_temporary>
   </component>
@@ -336,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688244890669</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="added test data to data providers for tests №3, 5, 6, 7">
+      <created>1688500352766</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1688500352766</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -370,6 +375,7 @@
     <MESSAGE value="added 10. Перевірка додавання фільтрів при пошуку товару" />
     <MESSAGE value="added 11. Перевірка додавання і очищення фільтрів при пошуку товару" />
     <MESSAGE value="added test data to data providers for tests №2, 8, 9, 10, 11" />
-    <option name="LAST_COMMIT_MESSAGE" value="added test data to data providers for tests №2, 8, 9, 10, 11" />
+    <MESSAGE value="added test data to data providers for tests №3, 5, 6, 7" />
+    <option name="LAST_COMMIT_MESSAGE" value="added test data to data providers for tests №3, 5, 6, 7" />
   </component>
 </project>

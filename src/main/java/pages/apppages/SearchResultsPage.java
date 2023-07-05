@@ -6,6 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class SearchResultsPage extends BasePage {
@@ -41,6 +44,15 @@ public class SearchResultsPage extends BasePage {
 
     @FindBy(xpath = "//div[@class='checked-items__element']")
     private List<WebElement> appliedFilters;
+
+    @FindBy(xpath = "//div[@class='show-for-large']//a[@data-href='asc']")
+    private WebElement filterButtonSortAscending;
+
+    @FindBy(xpath = "//div[@class='show-for-large']//a[@data-href='desc']")
+    private WebElement filterButtonSortDescending;
+
+    @FindBy(xpath = "//div[@class='columns product-Wrap card-wrapper ']//span[@class='card__price-sum']")
+    private List<WebElement> searchResultsListPrices;
 
 
 
@@ -108,5 +120,40 @@ public class SearchResultsPage extends BasePage {
     public void clickCartIcon() {
         cartIcon.click();
     }
+
+    public void clickFilterButtonSortAscending() {
+        filterButtonSortAscending.click();
+        waitForActionToBeCompleted();
+    }
+
+    public void clickFilterButtonSortDescending() {
+        filterButtonSortDescending.click();
+        waitForActionToBeCompleted();
+    }
+
+    public List<String> getSearchResultsListPrices() {
+        List<String> productPrices = new ArrayList<>();
+        for (WebElement price : searchResultsListPrices) {
+            String productPrice = String.valueOf(Double.parseDouble(price.getText().replaceAll("[^\\d.,]", "")));
+            productPrices.add(productPrice);
+        }
+        return productPrices;
+    }
+
+    public List<String> sortProductPricesInAscendingOrder(List<String> prices) {
+        List<String> ascendingSorted = new ArrayList<>(prices);
+        ascendingSorted.sort(Comparator.comparingDouble(Double::parseDouble));
+        return ascendingSorted;
+    }
+
+    public List<String> sortProductPricesInDescendingOrder(List<String> prices) {
+        List<String> descendingSorted = new ArrayList<>(prices);
+        descendingSorted.sort(Comparator.comparingDouble(Double::parseDouble).reversed());
+        return descendingSorted;
+    }
+
+
+
+
 
 }

@@ -9,6 +9,9 @@ import pages.apppages.HomePage;
 import pages.apppages.ProductPage;
 import pages.apppages.SearchResultsPage;
 
+import java.util.Collections;
+import java.util.Comparator;
+
 public class SearchTests extends BaseTest {
 
     private HomePage homePage;
@@ -89,6 +92,15 @@ public class SearchTests extends BaseTest {
         };
     }
 
+    @DataProvider(name = "searchForProductsApplyingSortingByPriceAscendingThenDescending")
+    public static Object[][] searchForProductsApplyingSortingByPriceAscendingThenDescendingDataProvider() {
+        return new Object[][] {
+                {
+                        "ліхтар налобний"
+                }
+        };
+    }
+
     @Test(dataProvider = "searchUsingEightDigitsCode", description = "9. Перевірка пошуку за 8-значним кодом товару")
     public void searchUsingEightDigitsCodeTest(String eightDigitCode, String testProductName) {
         homePage.openHomePage(HOME_URL);
@@ -130,6 +142,19 @@ public class SearchTests extends BaseTest {
             softAssert.assertTrue(productPage.getProductDescription().contains(secondFilter));
             softAssert.assertAll();
         }
+    }
+
+    @Test(dataProvider = "searchForProductsApplyingSortingByPriceAscendingThenDescending",
+            description = "12. Перевірка сортування по ціні при пошуку товару")
+    public void searchForProductsApplyingSortingByPriceAscendingThenDescending(String productName) {
+        homePage.openHomePage(HOME_URL);
+        homePage.enterProductNameInSearchInputField(productName);
+        searchResultsPage.clickFilterButtonSortAscending();
+        Assert.assertEquals(searchResultsPage.sortProductPricesInAscendingOrder(searchResultsPage.getSearchResultsListPrices()),
+                            searchResultsPage.getSearchResultsListPrices());
+        searchResultsPage.clickFilterButtonSortDescending();
+        Assert.assertEquals(searchResultsPage.sortProductPricesInDescendingOrder(searchResultsPage.getSearchResultsListPrices()),
+                searchResultsPage.getSearchResultsListPrices());
     }
 
 

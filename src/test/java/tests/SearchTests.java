@@ -1,9 +1,7 @@
 package tests;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 import pages.apppages.HomePage;
 import pages.apppages.ProductPage;
@@ -99,7 +97,20 @@ public class SearchTests extends BaseTest {
         return new Object[][] {
                 {
                         "ліхтар налобний"
-                }
+                },
+                {
+                        "ванна акрилова"
+                },
+                {
+                        "гойдалка з навісом"
+                },
+                {
+                        "базальтова вата"
+                },
+                {
+                        "годинник тактичний"
+                },
+
         };
     }
 
@@ -108,7 +119,19 @@ public class SearchTests extends BaseTest {
         return new Object[][] {
                 {
                         "пилосос ручний", "10000", "5000"
-                }
+                },
+                {
+                        "зовнішній акумулятор", "5000", "1000"
+                },
+//                {
+//                        "крісло офісне", "7000", "3000"
+//                },
+//                {
+//                        "лампа світлодіодна", "300", "80"
+//                },
+//                {
+//                        "велосипед", "7500", "3500"
+//                },
         };
     }
 
@@ -178,14 +201,17 @@ public class SearchTests extends BaseTest {
         searchResultsPage.setMaxValueForSearchResults(maxPrice);
         List<String> smallerValues = searchResultsPage.getSearchResultsListPrices();
         smallerValues.sort(Comparator.comparingDouble(Double::parseDouble));
+        System.out.println(smallerValues);
         double lastPrice = Double.parseDouble(smallerValues.get(smallerValues.size()-1));
         Assert.assertTrue(lastPrice <= Double.parseDouble(maxPrice));
         searchResultsPage.setMinValueForSearchResults(minPrice);
         List<String> greaterValues = searchResultsPage.getSearchResultsListPrices();
         greaterValues.sort(Comparator.comparingDouble(Double::parseDouble));
+        System.out.println(greaterValues);
         double firstPrice = Double.parseDouble(greaterValues.get(0));
-        Assert.assertTrue(firstPrice >= Double.parseDouble(minPrice));
+        Assert.assertTrue(firstPrice >= Double.parseDouble(minPrice) && firstPrice <= Double.parseDouble(maxPrice));
     }
+
 
 
 }

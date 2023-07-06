@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="51c19b21-10c4-40a6-8f8b-89d9c045a1b4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/SearchResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/SearchResultsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/SearchTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SearchTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +69,7 @@
       <recent name="tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SearchTests.searchForProductsApplyingFilterByPrice">
+  <component name="RunManager" selected="TestNG.SearchTests.searchForProductsApplyingSortingByPriceAscendingThenDescending">
     <configuration name="AddingProductsToListsTests.checkAddingProductToWishListWhenUserIsAuthorizedTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Epicentr_testing" />
       <extension name="coverage">
@@ -164,8 +162,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SearchTests.searchForProductsApplyingFilterByPrice" />
         <item itemvalue="TestNG.SearchTests.searchForProductsApplyingSortingByPriceAscendingThenDescending" />
+        <item itemvalue="TestNG.SearchTests.searchForProductsApplyingFilterByPrice" />
         <item itemvalue="TestNG.LocationTests.changeCurrentLocationTest" />
         <item itemvalue="TestNG.CatalogTests.checkCatalogSectionsTitlesTest" />
         <item itemvalue="TestNG.AddingProductsToListsTests.checkAddingProductToWishListWhenUserIsAuthorizedTest" />
@@ -349,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688577762429</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="rewritten test N12 and added 13. Перевірка фільтрування по ціні при пошуку товару">
+      <created>1688587619359</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1688587619359</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -385,6 +390,7 @@
     <MESSAGE value="added test data to data providers for tests №2, 8, 9, 10, 11" />
     <MESSAGE value="added test data to data providers for tests №3, 5, 6, 7" />
     <MESSAGE value="added test 12. Перевірка сортування по ціні при пошуку товару" />
-    <option name="LAST_COMMIT_MESSAGE" value="added test 12. Перевірка сортування по ціні при пошуку товару" />
+    <MESSAGE value="rewritten test N12 and added 13. Перевірка фільтрування по ціні при пошуку товару" />
+    <option name="LAST_COMMIT_MESSAGE" value="rewritten test N12 and added 13. Перевірка фільтрування по ціні при пошуку товару" />
   </component>
 </project>

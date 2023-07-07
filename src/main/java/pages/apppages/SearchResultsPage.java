@@ -49,7 +49,7 @@ public class SearchResultsPage extends BasePage {
     @FindBy(xpath = "//div[@class='show-for-large']//a[@data-href='desc']")
     private WebElement filterButtonSortDescending;
 
-    @FindBy(xpath = "//div[@class='columns product-Wrap card-wrapper  ']//span[@class='card__price-sum']")
+    @FindBy(xpath = "//div[@class='columns product-Wrap card-wrapper ']//span[@class='card__price-sum']")
     private List<WebElement> searchResultsListPrices;
 
     @FindBy(xpath = "//input[@class='range-slider__input min-price']")

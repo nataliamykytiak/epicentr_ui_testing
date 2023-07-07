@@ -28,7 +28,6 @@ public class SearchTests extends BaseTest {
     }
 
 
-
     @DataProvider(name = "searchUsingEightDigitsCode")
     public static Object[][] searchUsingEightDigitsCodeDataProvider() {
         return new Object[][] {
@@ -118,20 +117,20 @@ public class SearchTests extends BaseTest {
     public static Object[][] searchForProductsApplyingFilterByPriceDataProvider() {
         return new Object[][] {
                 {
-                        "пилосос ручний", "10000", "5000"
+                        "килим", "20000", "6000"
                 },
                 {
                         "зовнішній акумулятор", "5000", "1000"
                 },
-//                {
-//                        "крісло офісне", "7000", "3000"
-//                },
-//                {
-//                        "лампа світлодіодна", "300", "80"
-//                },
-//                {
-//                        "велосипед", "7500", "3500"
-//                },
+                {
+                        "крісло офісне", "7000", "3000"
+                },
+                {
+                        "лампа світлодіодна", "300", "80"
+                },
+                {
+                        "велосипед", "7500", "3500"
+                },
         };
     }
 
@@ -209,8 +208,10 @@ public class SearchTests extends BaseTest {
         greaterValues.sort(Comparator.comparingDouble(Double::parseDouble));
         System.out.println(greaterValues);
         double firstPrice = Double.parseDouble(greaterValues.get(0));
-        Assert.assertTrue(firstPrice >= Double.parseDouble(minPrice) && firstPrice <= Double.parseDouble(maxPrice));
+        lastPrice = Double.parseDouble(greaterValues.get(greaterValues.size()-1));
+        Assert.assertTrue(firstPrice >= Double.parseDouble(minPrice) && lastPrice <= Double.parseDouble(maxPrice));
     }
+
 
 
 

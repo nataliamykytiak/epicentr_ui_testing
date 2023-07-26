@@ -49,6 +49,11 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//span[@class='header__cart-counter']")
     private List<WebElement> cartIcon;
 
+    @FindBy(xpath = "//a[@class='banner-link']")
+    private List <WebElement> actionsBannersList;
+
+
+
 
 
     public HomePage(WebDriver driver) {
@@ -117,6 +122,19 @@ public class HomePage extends BasePage {
         if (!cartIcon.isEmpty() && cartIcon.get(0).isDisplayed()) {
             return cartIcon.get(0).getText();
         } else return "0";
+    }
+
+    public void chooseActionsBanner(int listNumber){
+        waitForElementToBeClickable(actionsBannersList.get(listNumber-1));
+        actionsBannersList.get(listNumber-1).click();
+    }
+
+    public String getFormattedImageAddress(int listNumber) {
+        String styleAttribute = actionsBannersList.get(listNumber-1).getAttribute("style");
+        int startIndex = styleAttribute.indexOf("\"") + 1;
+        int endIndex = styleAttribute.lastIndexOf("\"");
+        String fullName = styleAttribute.substring(startIndex, endIndex);
+        return fullName.substring(fullName.lastIndexOf('/') + 1);
     }
 
 

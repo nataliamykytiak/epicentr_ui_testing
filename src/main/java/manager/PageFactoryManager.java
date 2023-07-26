@@ -42,4 +42,8 @@ public class PageFactoryManager {
         return new CartPage(driver);
     }
 
+    public ActionsPage getActionsPage() {
+        return new ActionsPage(driver);
+    }
+
 }

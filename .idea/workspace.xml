@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="51c19b21-10c4-40a6-8f8b-89d9c045a1b4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/SearchResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/SearchResultsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/SearchTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SearchTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/manager/PageFactoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/PageFactoryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/apppages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/apppages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CatalogTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CatalogTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,11 +55,11 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/IdeaProjects/Epicentr_testing/src/test/java/tests&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/IdeaProjects&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/IdeaProjects/Epicentr_testing&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -70,25 +72,7 @@
       <recent name="tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SearchTests.searchForProductsApplyingFilterByPrice">
-    <configuration name="AddingProductsToListsTests.checkAddingProductToWishListWhenUserIsAuthorizedTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Epicentr_testing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AddingProductsToListsTests" />
-      <option name="METHOD_NAME" value="checkAddingProductToWishListWhenUserIsAuthorizedTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.CatalogTests.checkThatActionBannerLeadsToCorrectActionPageTest">
     <configuration name="CatalogTests.checkCatalogSectionsTitlesTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Epicentr_testing" />
       <extension name="coverage">
@@ -100,6 +84,24 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.CatalogTests" />
       <option name="METHOD_NAME" value="checkCatalogSectionsTitlesTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CatalogTests.checkThatActionBannerLeadsToCorrectActionPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Epicentr_testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CatalogTests" />
+      <option name="METHOD_NAME" value="checkThatActionBannerLeadsToCorrectActionPageTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -163,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CatalogTests.checkThatActionBannerLeadsToCorrectActionPageTest" />
         <item itemvalue="TestNG.SearchTests.searchForProductsApplyingFilterByPrice" />
         <item itemvalue="TestNG.SearchTests.searchForProductsApplyingSortingByPriceAscendingThenDescending" />
         <item itemvalue="TestNG.LocationTests.changeCurrentLocationTest" />
         <item itemvalue="TestNG.CatalogTests.checkCatalogSectionsTitlesTest" />
-        <item itemvalue="TestNG.AddingProductsToListsTests.checkAddingProductToWishListWhenUserIsAuthorizedTest" />
       </list>
     </recent_temporary>
   </component>
@@ -362,7 +364,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688676993528</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="fixed an issue in data provider for test #13">
+      <created>1688759672464</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1688759672464</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -400,6 +409,7 @@
     <MESSAGE value="added test 12. Перевірка сортування по ціні при пошуку товару" />
     <MESSAGE value="rewritten test N12 and added 13. Перевірка фільтрування по ціні при пошуку товару" />
     <MESSAGE value="added test data for test N12 and 13. 13th test has an issue - second and next methods are failing because price list is not populating with prices" />
-    <option name="LAST_COMMIT_MESSAGE" value="added test data for test N12 and 13. 13th test has an issue - second and next methods are failing because price list is not populating with prices" />
+    <MESSAGE value="fixed an issue in data provider for test #13" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed an issue in data provider for test #13" />
   </component>
 </project>

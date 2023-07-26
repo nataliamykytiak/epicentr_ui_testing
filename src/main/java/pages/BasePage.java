@@ -9,7 +9,7 @@ import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class BasePage {
+public abstract class BasePage {
 
     protected WebDriver driver;
 
@@ -56,6 +56,12 @@ public class BasePage {
                 .until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(xPath)));
     }
 
+    public String getFormattedImageAddress(WebElement element) {
+        String styleAttribute = element.getAttribute("style");
+        int startIndex = styleAttribute.indexOf("\"") + 1;
+        int endIndex = styleAttribute.lastIndexOf("\"");
+        return styleAttribute.substring(startIndex, endIndex);
+    }
 
 
 }
